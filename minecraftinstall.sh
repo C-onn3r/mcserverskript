@@ -53,6 +53,6 @@ chmod +x start.sh
 
 echo "Dein Server wurde erfolgreich eingerichtet!"
 echo "Beachte, dass du die eula.txt noch akzeptieren musst!"
-echo "Erledige dies einfach mit 'nano eula.txt'."
+echo "Erledige dies einfach mit 'nano eula.txt -> FALSE zu TRUE AENDERN!'."
 echo "Deinen Server kannst du übrigens mit './start.sh' starten!"
 ./start.sh
