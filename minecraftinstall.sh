@@ -2,7 +2,7 @@
 
 echo "Minecraft Server installer Skript von C-onn3r, https://bit.ly/4cP5qr6"
 
-read -p "Die .jar Dateien werden von files.allemeinedaten.de heruntergeladen, dieser Server wird von mir bereitgestellt, es werden keine daten erfasst. Möchtest du fortfahren? (ja/nein): " choice
+read -p "Die .jar Dateien werden von files.allemeinedaten.de heruntergeladen, dieser Server wird von mir bereitgestellt, es werden keine Daten erfasst. Möchtest du fortfahren? (ja/nein): " choice
 case "$choice" in
   j|J|ja|Ja ) echo "Weiter geht's...";;
   * ) echo "Abbruch."; exit;;
@@ -19,8 +19,8 @@ else
 fi
 
 read -p "Wie soll der Ordner heißen, in dem der Server installiert werden soll? " folder_name
-mkdir $folder_name
-cd $folder_name
+mkdir "$folder_name"
+cd "$folder_name"
 
 echo "Welche Minecraft Server-Version möchtest du installieren?"
 echo "1 -> 1.20.4"
@@ -44,7 +44,7 @@ esac
 
 echo "Die Server .jar wurde erfolgreich installiert."
 
-read -p "Wie viel MB Ram darf der Server nutzen? (Mindestens 512 MB!): " ram_amount
+read -p "Wie viel MB RAM darf der Server nutzen? (Mindestens 512 MB!): " ram_amount
 
 case "$ram_amount" in
     *[!0-9]*|0*)
