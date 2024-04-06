@@ -1,0 +1,1 @@
+screen -R change java -Xms2048M -Xmx4096M -jar paper.jar
