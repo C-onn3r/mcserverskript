@@ -33,12 +33,12 @@ echo "6 -> 1.16.5"
 read -p "Deine Auswahl: " minecraft_version
 
 case "$minecraft_version" in
-  1 .20.4 ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/97aa44a6-0c61-4487-8878-2b6ddfe8481b;;
-  2 .20.0 ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/dff386e7-2c90-4a19-b419-df70f1bc1757;; 
-  3 .19.4 ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/21e9363b-7eed-4627-b95f-dffbe332b983;;
-  4 .18.2 ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/de2fe5d5-fe08-4ef4-adeb-b03caa8be10e;;
-  5 .17.1 ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/858e910a-cc0a-4225-93b0-99f706e57a7b;;
-  6 .16.5 ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/ed076320-4e34-4878-9ed2-89d5eb369839;;
+  1  ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/97aa44a6-0c61-4487-8878-2b6ddfe8481b;; # .20.4   Versions without 1. 
+  2  ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/dff386e7-2c90-4a19-b419-df70f1bc1757;; # .20.0 
+  3  ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/21e9363b-7eed-4627-b95f-dffbe332b983;; # .19.4 
+  4  ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/de2fe5d5-fe08-4ef4-adeb-b03caa8be10e;; # .18.2
+  5  ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/858e910a-cc0a-4225-93b0-99f706e57a7b;; # .17.1 
+  6  ) wget --output-document=paper.jar https://files.allemeinedaten.de/api/shares/UzMDU0M/files/ed076320-4e34-4878-9ed2-89d5eb369839;; # .16.5
   * ) echo "Ungültige Eingabe. Abbruch."; exit;;
 esac
 
