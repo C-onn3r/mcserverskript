@@ -36,12 +36,12 @@ echo "Die Server .jar wurde erfolgreich installiert."
 read -p "Wie viel MB Ram darf der Server nutzen? (Mindestens 512 MB!): " ram_amount
 
 case "$ram_amount" in
-    [1-9]|[1-9][0-9]|[1-9][0-9][0-9]|1[0-6] )
-        ram_in_mb=$((ram_amount * 1024))
-        ;;
-    * )
+    *[!0-9]*|0*)
         echo "Ungültige Eingabe. Abbruch."
         exit 1
+        ;;
+    * )
+        ram_in_mb="$ram_amount"
         ;;
 esac
 
