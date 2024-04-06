@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Minecraft Server installer Skript von C-onner -> https://c-onner.de"
+echo "Minecraft Server installer Skript von C-onn3r, https://bit.ly/4cP5qr6"
 
-read -p "Möchtest du die Installation starten? (ja/nein): " choice
+read -p "Die .jar Dateien werden von files.allemeinedaten.de heruntergeladen, dieser Server wird von mir bereitgestellt, es werden keine daten erfasst. Möchtest du fortfahren? (ja/nein): " choice
 case "$choice" in
   j|J|ja|Ja ) echo "Weiter geht's...";;
   * ) echo "Abbruch."; exit;;
