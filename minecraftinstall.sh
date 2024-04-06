@@ -33,13 +33,21 @@ esac
 
 echo "Die Server .jar wurde erfolgreich installiert."
 
-read -p "Wie viel GB RAM soll der Server verwenden? (2/4/6/8/16 GB): " ram_amount
+read -p "Wie viel MB Ram darf der Server nutzen? (Mindestens 512 MB!): " ram_amount
+
 case "$ram_amount" in
-  2|4|6|8|16 ) ;;
-  * ) echo "Ungültige Eingabe. Abbruch."; exit;;
+    [1-9]|[1-9][0-9]|[1-9][0-9][0-9]|1[0-6] )
+        ram_in_mb=$((ram_amount * 1024))
+        ;;
+    * )
+        echo "Ungültige Eingabe. Abbruch."
+        exit 1
+        ;;
 esac
 
-echo "screen -S minecraftserver java -Xms${ram_amount}G -Xmx${ram_amount}G -jar paper.jar" > start.sh
+# Erzeuge den Startbefehl für den Minecraft-Server
+echo "screen -S minecraftserver java -Xms${ram_in_mb}M -Xmx${ram_in_mb}M -jar paper.jar" > start.sh
+
 sudo apt install screen -y
 chmod +x start.sh
 
